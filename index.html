@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Metadatos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+    <!--Iconos BS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      i {
+        color: white; 
+        font-size: 40px;
+      }
+    </style>
+</head>
+<body>
+<!-- Encabezado -->
+<header class="container-fluid">
+    <img src="Imagenes/BannerCod.jpg" width="100%" height="200">
+</header>
+<!--Barra de Navegación con Bootstrap-->
+    <nav class="navbar navbar-expand-md" data-bs-theme="dark" style="background-color: #003aa3fe";>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="pizarra.html" target="frame">Inicio</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Contenido
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Documentos/1_Variables_TipoDeDatos.pdf" target="_blank">Variables y Tipo de Datos</a></li>
+                <li><a class="dropdown-item" href="Documentos/2_Operadores.pdf" target="_blank">Operadores</a></li>
+                <li><a class="dropdown-item" href="">Estructuras de Control</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ejercicios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">Resueltos</a></li>
+                <li><a class="dropdown-item" href="">Para Desarrollar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Recursos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.freecodecamp.org/espanol/" target="_blank">Editor FreeCodeCamp</a></li>
+                <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=ivdTnPl1ND0&t=302s" target="_blank">Curso JS</a></li>
+                <li><a class="dropdown-item" href="https://developer.mozilla.org/es/" target="_blank">MDN</a></li>
+              </ul>
+            </li>
+            <a class="nav-link" href="https://github.com/maryzambrano/EjerciciosJS" target="_blank">Repositorio</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!-- Sección Consignas -->
+    <section class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Ejercicio #1
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Salidas de Pantalla.</strong> Crea un documento HTML que muestre un encabezado (Salidas en Pantalla de JS) y tres botones (Consola, Alerta, DOM). Al hacer clic en cada botón, mostrará saludos por pantalla.
+                      <!--<a href="" target="frame">Ejecutar</a>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Ejercicio #2
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Formulario de contacto.</strong> Muestra un formulario de contacto y envía la información a una segunda página, que devuelve alguno de los datos recibidos.
+                      <!--<a href="" target="frame">Ejecutar</a>-->
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Ejercicio #3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Calculadora de IMC.</strong> Crea un formulario que solicite Nombre, Apellido, Fecha de nacimiento, Género, Peso(Kg), Estatura(m) y devuelva un alerta con el nombre completo, la edad y el Indice de Masa Corporal .
+                      <!--<a href="" target="frame">Ejecutar</a>-->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col" style="height:600px;"> 
+            <iframe name="frame" src="pizarra.html" width="100%" height="100%">   
+            </iframe> 
+          </div>
+        </div>
+    </section>
+<!-- Pie de página -->
+    <footer class="text-white text-center py-3" style="background-color: #003aa3fe";> 
+        <p>Realizado por: Prof. Marynellis Zambrano V.</p>
+          <a href="https://github.com/maryzambrano" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://drive.google.com/drive/folders/1A7TVhOagUf92krenUfXsUTo-OQlnCQh4?usp=drive_link" target="_blank"><i class="bi bi-cloud-arrow-down"></i></a></p>
+    </footer>
+
+    <!-- Enlace a los scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+</body>
+</html>
