@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <h2>Salidas en pantalla de JS</h2>
+    <button onclick="saludoConsola()">Consola</button>
+    <button onclick="saludoAlerta()">Alerta</button>
+    <button onclick="saludoDOM()">DOM</button>
+    <p id="saludo"></p>
+    <!--Código JS interno-->
+    <script>
+        function saludoConsola() {
+            console.log("¡Hola desde consola!");
+        }
+
+        function saludoAlerta() {
+            alert("¡Hola desde alerta!");
+        }
+        
+        function saludoDOM() {
+            document.getElementById("saludo").textContent="¡Hola desde el DOM!";
+        }
+    </script>
+</body>
+</html>
