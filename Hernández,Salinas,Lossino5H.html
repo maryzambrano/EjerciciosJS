@@ -19,7 +19,7 @@
             document.getElementById("cuantoFalta").textContent="Faltan " + calcularDias + " días para terminar la secundaria"
             
         }
-    var fechaActual = new Date (2023,9,18);
+    var fechaActual = new Date ();
     var fechaFinal = new Date (2023,11,1);
     var diferencia = fechaFinal-fechaActual;
     var calcularDias = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
