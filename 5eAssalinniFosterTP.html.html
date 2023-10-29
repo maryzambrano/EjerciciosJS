@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de IMC</title>
+
+</head
+<body>
+    <h1>Calculadora de IMC</h1>
+    <form id="formulario">
+        
+       
+<label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        
+
+       
+<label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required><br><br>
+
+        <label for="genero">Género:</label>
+        
+<select id="genero" required>
+            <option value="masculino">Masculino</option>
+            
+<option value="femenino">Femenino</option>
+        
+       
+</select><br><br>
+
+        
+
+<label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        
+       
+<input type="date" id="fecha_nacimiento" required><br><br>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" step="0.01" required><br><br>
+
+<label for="estatura">Estatura (m):</label>
+        
+<input type="number" id="estatura" step="0.01" required><br><br>
+
+        
+
+       
+<button type="button" onclick="calcularIMC()">Calcular IMC</button>
+    
+   
+</form>
+
+    
+
+<div id="resultado"></div>
+
+    
+
+<script>
+       
+
+        function calcular IMC() 
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido
+
+        function calcular IMC() 
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const genero = document.getElementById("genero").value;
+            const fechaNacimiento = new Date(document.getElementById("fecha_nacimiento
+
+        function calcular IMC() {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const genero = document.getElementById("genero").value;
+            const fechaNacimiento = new Date(document.getElementById("fecha_nacimiento").value);
+            const peso = parseFloat(document.getElementById("
+
+        function calcular IMC() {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const genero = document.getElementById("genero").value;
+            const fechaNacimiento = new Date(document.getElementById("fecha_nacimiento").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+            const estatura = parseFloat(document.getElementById("estatura").value);
+
+            // Calcular la edad
+            const fechaActual = new Date();
+            const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+
+            // Calcular el IMC
+            const imc = peso / (estatura * estatura);
+
+            // Mostrar los resultados
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = `
+                <h2>Resultados</h2>
+                <p>Nombre completo: ${nombre} ${apellido}</p>
+                <p>Edad: ${edad} años</p>
+                <p>Índice de Masa Corporal (IMC): ${imc.toFixed(2)}</p>
+                <p>Género: ${genero}</p>
+            `;
+        }
+    </script>
+</body>
+
+</
+</html>
