@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form id="imcForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <br></br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+        <br></br>
+        <label>Género:</label>
+        <input type="radio" id="generoM" name="genero" value="Masculino"> Masculino
+        <input type="radio" id="generoF" name="genero" value="Femenino"> Femenino
+        <br></br>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento">
+        <button type="button" onclick="calcularEdad()">Calcular Edad</button>
+        <br></br>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.01" required><br>
+        <br></br>
+        <label for="estatura">Estatura (m):</label>
+        <input type="number" id="estatura" name="estatura" step="0.01" required><br>
+        <br></br>
+        <input type="button" value="Enviar" onclick="calcularIMC()">
+    </form>
+
+    <script>
+        function calcularIMC() {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const peso = parseFloat(document.getElementById("peso").value);
+            const estatura = parseFloat(document.getElementById("estatura").value);
+            const imc = peso / (estatura * estatura);
+            const resultado = `Nombre: ${nombre}\nApellido: ${apellido}\nIMC: ${imc.toFixed(2)}`;
+            alert(resultado);
+        }
+        function calcularEdad() {
+            var fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
+            var fechaActual = new Date();
+
+            var edadEnMilisegundos = fechaActual - fechaNacimiento;
+            var edadEnAnios = Math.floor(edadEnMilisegundos / (365.25 * 24 * 60 * 60 * 1000));
+
+            alert('Tu edad es ' + edadEnAnios + ' años.');
+        }
+    </script>
+</body>
+</html>
