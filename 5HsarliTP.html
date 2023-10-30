@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+<title>Calculadora de IMC</title>
+
+</head>
+
+<body>
+    <h1>Calculadora de Índice de Masa Corporal (IMC)</h1>
+    
+    <form>
+        <label for="nombre">Nombre:</label>
+        
+        
+<input type="text" id="nombre" name="nombre" required><br><br>
+
+        
+
+       
+<label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        
+
+<label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.01" required><br><br>
+
+        <label for="estatura">Estatura (m):</label>
+        <input type="number" id="estatura" name="estatura" step="0.01" required><br><br>
+
+        <input type="button" value="Calcular IMC" onclick="calcularIMC()"><br><br>
+
+        <label for="imc">Índice de Masa Corporal (IMC):</label>
+        <input type="text" id="imc" name="imc" readonly>
+    </form>
+
+    <script>
+        function calcularIMC() {
+            var peso = parseFloat(document.getElementById("peso").value);
+            var estatura = parseFloat(document.getElementById("estatura").value);
+        }
+            //Corrección: Agregué ").value);}
+
+        function calcularIMC() {
+            var peso = parseFloat(document.getElementById("peso").value);
+            var estatura = parseFloat(document.getElementById("estatura").value);
+            var imc = peso / (estatura * estatura);
+            document.getElementById("imc").value = imc.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>
