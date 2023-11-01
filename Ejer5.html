@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h2>Área de figuras geométricas</h2>
+
+        <!--Tarjeta para Rectangulo-->
+          <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Rectángulo</h5>
+                  <p class="card-text">Realizado por: XXX (5°X)</p>
+                  <form id="formRectangulo">
+                    <label for="base">Base:</label>
+                    <input type="number" id="baseR" name="baseR" required><br><br>
+                    <label for="altura">Altura:</label>
+                    <input type="number" id="alturaR" name="alturaR" required><br><br>
+                    <input type="button" value="Calcular" class="btn btn-primary" onclick="areaRectangulo()">
+                    <p id="resultadoRectangulo"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!--Tarjeta para Triangulo-->
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Triángulo</h5>
+                  <p class="card-text">Realizado por: XXX (5°X)</p>
+                  <form id="formTriangulo">
+                    <label for="lado">Base:</label>
+                    <input type="number" id="baseT" name="baseT" required><br><br>
+                    <label for="alturaT">Altura:</label>
+                    <input type="number" id="alturaT" name="alturaT" required><br><br>
+                    <input type="button" value="Calcular" class="btn btn-primary" onclick="areaTriangulo()">
+                    <p id="resultadoTriangulo"></p>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Tarjeta para Cuadrado-->
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Cuadrado</h5>
+                  <p class="card-text">Realizado por: XXX (5°X)</p>
+                  <form id="formCuadrado">
+                    <label for="lado">Lado:</label>
+                    <input type="number" id="lado" name="lado" required><br><br>
+                    <input type="button" value="Calcular" class="btn btn-primary"  onclick="areaCuadrado()">
+                    <p id="resultadoCuadrado"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          
+          <!--Tarjeta para Círculo-->
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Círculo</h5>
+                  <p class="card-text">Realizado por: XXX (5°X)</p>
+                  <form id="formCirculo">
+                    <label for="radio">Radio:</label>
+                    <input type="number" id="radio" name="radio" required><br><br>
+                    <input type="button" value="Calcular" class="btn btn-primary" onclick="areaCirculo()">
+                    <p id="resultadoCirculo"></p>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+   <script>
+    function areaRectangulo() {
+      //Aquí el código para calcular y mostrar el area del rectángulo
+    }
+    function areaTriangulo() {
+      //Aquí el código para calcular y mostrar el area del triángulo
+    }
+    function areaCuadrado() {
+      //Aquí el código para calcular y mostrar el area del cuadrado
+    }
+    function areaCirculo() {
+      //Aquí el código para calcular y mostrar el area del círculo
+    }
+   </script> 
+   <!--JS Bootstrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
