@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form id="imcForm">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" required>
+        <br></br>
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" required>
+        <br></br>
+    
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="nacimiento">
+        <button type="button" onclick="calcularEdad()">Calcular</button>
+        </br>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.01" required><br>
+        </br>
+        <label for="estatura">Estatura (m):</label>
+        <input type="number" id="estatura" name="estatura" step="0.01" required><br>
+        </br>
+        <label>Género:</label>
+        <input type="radio" id="generoM" name="genero" value="Masculino"> Masculino
+        <input type="radio" id="generoF" name="genero" value="Femenino"> Femenino
+        </br>
+        <input type="button" value="Enviar" onclick="calcularIMC()">
+    </form>
+
+    <script>
+        function calcularIMC() {
+            const Nombre = document.getElementById("Nombre").value;
+            const Apellido = document.getElementById("Apellido").value;
+            const peso = parseFloat(document.getElementById("peso").value);
+            const estatura = parseFloat(document.getElementById("estatura").value);
+            const imc = peso / (estatura * estatura);
+            const resultado = `Nombre: ${Nombre}\nApellido: ${Apellido}\nIMC: ${imc.toFixed(2)}`;
+            alert(resultado);
+        }
+      
+    </script>
+</body>
+</html>
