@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Área de Figuras Geométricas</title>
+</head>
+<body>
+    <h2>Área de figuras geométricas</h2>
+
+    <div>
+        <div>
+            <h5>Rectángulo</h5>
+            <p>Realizado por: Casalnuovo, Stumpo, Ovejero (5°E)</p>
+            <form id="formRectangulo" target="_blank">
+                <label for="baseR">Base:</label>
+                <input type="number" id="baseR" name="baseR"><br><br>
+                <label for="alturaR">Altura:</label>
+                <input type="number" id="alturaR" name="alturaR"><br><br>
+                <input type="button" value="Calcular" class="btn btn-primary" onclick="calcularRectangulo()">
+                <p id="resultadoRectangulo"></p>
+            </form>
+        </div>
+
+        <div>
+            <h5>Triángulo</h5>
+            <p>Realizado por: Casalnuovo, Stumpo, Ovejero (5°E)</p>
+            <form id="formTriangulo" target="_blank">
+                <label for="baseT">Base:</label>
+                <input type="number" id="baseT" name="baseT"><br><br>
+                <label for="alturaT">Altura:</label>
+                <input type="number" id="alturaT" name="alturaT"><br><br>
+                <input type="button" value="Calcular" class="btn btn-primary" onclick="calcularTriangulo()">
+                <p id="resultadoTriangulo"></p>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <h5>Cuadrado</h5>
+            <p>Realizado por: Casalnuovo, Stumpo, Ovejero (5°E)</p>
+            <form id="formCuadrado" target="_blank">
+                <label for="lado">Lado:</label>
+                <input type="number" id="lado" name="lado"><br><br>
+                <input type="button" value="Calcular" class="btn btn-primary" onclick="calcularCuadrado()">
+                <p id="resultadoCuadrado"></p>
+            </form>
+        </div>
+
+        <div>
+            <h5>Círculo</h5>
+            <p>Realizado por: Casalnuovo, Stumpo, Ovejero (5°E)</p>
+            <form id="formCirculo" target="_blank">
+                <label for="radio">Radio:</label>
+                <input type="number" id="radio" name="radio"><br><br>
+                <input type="button" value="Calcular" class="btn btn-primary" onclick="calcularCirculo()">
+                <p id="resultadoCirculo"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function calcularRectangulo() {
+            const base = parseFloat(document.getElementById('baseR').value);
+            const altura = parseFloat(document.getElementById('alturaR').value);
+            const resultado = base * altura;
+            document.getElementById('resultadoRectangulo').textContent = `El área del rectángulo es: ${resultado}`;
+        }
+
+        function calcularTriangulo() {
+            const base = parseFloat(document.getElementById('baseT').value);
+            const altura = parseFloat(document.getElementById('alturaT').value);
+            const resultado = (base * altura) / 2;
+            document.getElementById('resultadoTriangulo').textContent = `El área del triángulo es: ${resultado}`;
+        }
+
+        function calcularCuadrado() {
+            const lado = parseFloat(document.getElementById('lado').value);
+            const resultado = lado * lado;
+            document.getElementById('resultadoCuadrado').textContent = `El área del cuadrado es: ${resultado}`;
+        }
+
+        function calcularCirculo() {
+            const radio = parseFloat(document.getElementById('radio').value);
+            const resultado = Math.PI * Math.pow(radio, 2);
+            document.getElementById('resultadoCirculo').textContent = `El área del círculo es: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
