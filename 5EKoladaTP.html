@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Área</title>
+    <style>
+        img {
+            width: 120px; /* Ajusta el tamaño de la imagen según tus preferencias */
+            height: auto; /* Esto mantiene la proporción de la imagen */
+            vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+            margin-right: 10px; /* Agrega un espacio entre la imagen y el texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Área</h1>
+    
+    <!-- Rectángulo -->
+    <h2><img src="rectangulo.jpg" alt="Rectángulo"> Rectángulo</h2>
+    <label for="baseRectangulo">Base:</label>
+    <input type="number" id="baseRectangulo">
+    <label for="alturaRectangulo">Altura:</label>
+    <input type="number" id="alturaRectangulo">
+    <button onclick="calcularArea('rectangulo')">Calcular</button>
+    <p>Área del rectángulo: <span id="resultadoRectangulo"></span></p>
+
+    <!-- Cuadrado -->
+    <h2><img src="cuadrado.png" alt="Cuadrado"> Cuadrado</h2>
+    <label for="ladoCuadrado">Lado:</label>
+    <input type="number" id="ladoCuadrado">
+    <button onclick="calcularArea('cuadrado')">Calcular</button>
+    <p>Área del cuadrado: <span id="resultadoCuadrado"></span></p>
+
+    <!-- Círculo -->
+    <h2><img src="circulo.jpg" alt="Círculo"> Círculo</h2>
+    <label for="radioCirculo">Radio:</label>
+    <input type="number" id="radioCirculo">
+    <button onclick="calcularArea('circulo')">Calcular</button>
+    <p>Área del círculo: <span id="resultadoCirculo"></span></p>
+
+    <!-- Triángulo -->
+    <h2><img src="triangulo.png" alt="Triángulo"> Triángulo</h2>
+    <label for="baseTriangulo">Base:</label>
+    <input type="number" id="baseTriangulo">
+    <label for="alturaTriangulo">Altura:</label>
+    <input type="number" id="alturaTriangulo">
+    <button onclick="calcularArea('triangulo')">Calcular</button>
+    <p>Área del triángulo: <span id="resultadoTriangulo"></span></p>
+
+    <script>
+        function calcularArea(figura) {
+            var area = 0;
+            if (figura === 'rectangulo') {
+                var base = parseFloat(document.getElementById("baseRectangulo").value);
+                var altura = parseFloat(document.getElementById("alturaRectangulo").value);
+                area = base * altura;
+                document.getElementById("resultadoRectangulo").textContent = area;
+            } else if (figura === 'cuadrado') {
+                var lado = parseFloat(document.getElementById("ladoCuadrado").value);
+                area = lado * lado;
+                document.getElementById("resultadoCuadrado").textContent = area;
+            } else if (figura === 'circulo') {
+                var radio = parseFloat(document.getElementById("radioCirculo").value);
+                area = Math.PI * Math.pow(radio, 2);
+                document.getElementById("resultadoCirculo").textContent = area;
+            } else if (figura === 'triangulo') {
+                var base = parseFloat(document.getElementById("baseTriangulo").value);
+                var altura = parseFloat(document.getElementById("alturaTriangulo").value);
+                area = (base * altura) / 2;
+                document.getElementById("resultadoTriangulo").textContent = area;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo práctico</title>
+    <style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+    }
+    h1 {
+        background-color: aquamarine;
+    }
+    </style>
+</head>
+<body>
+    <h1>Rectángulo</h1>
+    <h3>Realizado por: Lucas Cohan, Valentin Gruschka, Micaela Mastrangelo (5°E)</h3>
+    <form id="formRectangulo">
+        <label for="base">Base:</label>
+        <input type="number" id="base" name="base" step="0.01" required><br>
+
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" name="altura" step="0.01" required><br>
+
+        <input type="button" value="Calcular" onclick="calcularRectangulo()">
+        <input type="button" value="Limpiar" onclick="limpiarFormulario('formRectangulo')">
+    </form>
+
+    <script>
+        function calcularRectangulo() {
+            const base = parseFloat(document.getElementById("base").value);
+            const altura = parseFloat(document.getElementById("altura").value);
+            const calculo = base * altura;
+            const resultado = `El área es: ${calculo.toFixed(2)}`;
+            alert(resultado);
+        }
+    </script>
+
+    <h1>Triángulo</h1>
+    <h3>Realizado por: Lucas Cohan, Valentin Gruschka, Micaela Mastrangelo (5°E)</h3>
+    <form id="formTriangulo">
+        <label for="base2">Base:</label>
+        <input type="number" id="base2" name="base2" step="0.01" required><br>
+
+        <label for "altura2">Altura:</label>
+        <input type="number" id="altura2" name="altura2" step="0.01" required><br>
+
+        <input type="button" value="Calcular" onclick="calcularTriangulo()">
+        <input type="button" value="Limpiar" onclick="limpiarFormulario('formTriangulo')">
+    </form>
+
+    <script>
+        function calcularTriangulo() {
+            const base = parseFloat(document.getElementById("base2").value);
+            const altura = parseFloat(document.getElementById("altura2").value);
+            const calculo = (base * altura) / 2;
+            const resultado = `El área es: ${calculo.toFixed(2)}`;
+            alert(resultado);
+        }
+    </script>
+
+    <h1>Cuadrado</h1>
+    <h3>Realizado por: Lucas Cohan, Valentin Gruschka, Micaela Mastrangelo (5°E)</h3>
+    <form id="formCuadrado">
+        <label for="lado">Lado:</label>
+        <input type="number" id="lado" name="lado" step="0.01" required><br>
+
+        <input type="button" value="Calcular" onclick="calcularCuadrado()">
+        <input type="button" value="Limpiar" onclick="limpiarFormulario('formCuadrado')">
+    </form>
+
+    <script>
+        function calcularCuadrado() {
+            const lado = parseFloat(document.getElementById("lado").value);
+            const calculo = lado * lado;
+            const resultado = `El área es: ${calculo.toFixed(2)}`;
+            alert(resultado);
+        }
+    </script>
+
+    <h1>Círculo</h1>
+    <h3>Realizado por: Lucas Cohan, Valentin Gruschka, Micaela Mastrangelo (5°E)</h3>
+    <form id="formCirculo">
+        <label for="radio">Radio:</label>
+        <input type="number" id="radio" name="radio" step="0.01" required><br>
+
+        <input type="button" value="Calcular" onclick="calcularCirculo()">
+        <input type="button" value="Limpiar" onclick="limpiarFormulario('formCirculo')">
+    </form>
+
+    <script>
+        function calcularCirculo() {
+            const radio = parseFloat(document.getElementById("radio").value);
+            const calculo = 3.14 * (radio * radio);
+            const resultado = `El área es: ${calculo.toFixed(2)}`;
+            alert(resultado);
+        }
+
+        function limpiarFormulario(formId) {
+            document.getElementById(formId).reset();
+        }
+    </script>
+</body>
+</html>
